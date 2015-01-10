@@ -1,12 +1,10 @@
 package naojava;
 
-import com.aldebaran.qimessaging.Application;
 import com.aldebaran.qimessaging.Future;
 import com.aldebaran.qimessaging.Session;
 
 public class HelloNao {
 	public static void main(String[] args) throws Exception {
-		Application app = new Application(args);
 		Session session = new Session();
 		Future<Void> fut = session.connect("tcp://ned.local:9559");
 		fut.get();
